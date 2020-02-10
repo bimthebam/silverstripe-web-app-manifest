@@ -1,0 +1,21 @@
+---
+Name: web_app_manifest
+---
+
+WebAppManifest:
+  icon_sizes:
+    - 16
+    - 32
+    - 36
+    - 48
+    - 72
+    - 96
+    - 144
+    - 192
+    - 256
+    - 512
+  ios_icon_sizes:
+    - 120
+    - 152
+    - 167
+    - 180

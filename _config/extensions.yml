@@ -1,0 +1,10 @@
+---
+Name: web_app_manifest_extensions
+---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - BimTheBam\WebAppManifest\Model\Extension\SiteConfig
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - BimTheBam\WebAppManifest\Model\Extension\SiteTree

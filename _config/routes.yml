@@ -1,0 +1,10 @@
+---
+Name: web_app_manifest_routes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+
+SilverStripe\Control\Director:
+  rules:
+    'web-app-manifest': 'BimTheBam\WebAppManifest\Control\ManifestController'
