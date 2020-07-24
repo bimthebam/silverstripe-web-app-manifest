@@ -13,7 +13,8 @@
     "require": {
         "composer/installers": "*",
         "silverstripe/framework": "~4.0",
-        "bimthebam/silverstripe-native-color-input": "~1.0.0"
+        "bimthebam/silverstripe-native-color-input": "~1.0.0",
+        "symbiote/silverstripe-gridfieldextensions": "~3.0"
     },
     "autoload": {
         "psr-4": {
