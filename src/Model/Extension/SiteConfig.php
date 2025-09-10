@@ -7,6 +7,7 @@ use BimTheBam\NativeColorInput\Form\Field\ColorField;
 use BimTheBam\WebAppManifest\Model\RelatedApplication;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -18,7 +19,6 @@ use SilverStripe\Forms\GridField\GridFieldPaginator;
 use SilverStripe\Forms\GridField\GridFieldSortableHeader;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\FieldType\DBText;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\ORM\HasManyList;
@@ -38,7 +38,7 @@ use Symbiote\GridFieldExtensions\GridFieldTitleHeader;
  * @method Image WebAppManifestIcon()
  * @method HasManyList|RelatedApplication[] RelatedApplications()
  */
-class SiteConfig extends DataExtension
+class SiteConfig extends Extension
 {
 
     /**
@@ -106,8 +106,6 @@ class SiteConfig extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        parent::updateCMSFields($fields);
-
         $scClass = \SilverStripe\SiteConfig\SiteConfig::class;
 
         $tab = $fields->findOrMakeTab(

@@ -6,20 +6,20 @@ namespace BimTheBam\WebAppManifest\Model\Extension;
 use BimTheBam\WebAppManifest\Control\ManifestController;
 use BimTheBam\WebAppManifest\Model\RelatedApplication;
 use SilverStripe\Assets\Image;
-use SilverStripe\CMS\Model\SiteTreeExtension;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Core\Extension;
 
 /**
  * Class SiteTree
  * @package BimTheBam\WebAppManifest\Model\Extension
  */
-class SiteTree extends SiteTreeExtension
+class SiteTree extends Extension
 {
 
     /**
      * @param array $tags
      */
-    public function MetaComponents(array &$tags)
+    public function updateMetaComponents(array &$tags)
     {
         /** @var \SilverStripe\SiteConfig\SiteConfig|SiteConfig $siteConfig */
         if (!($siteConfig = \SilverStripe\SiteConfig\SiteConfig::current_site_config())) {
