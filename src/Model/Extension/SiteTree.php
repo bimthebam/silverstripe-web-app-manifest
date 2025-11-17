@@ -93,7 +93,7 @@ class SiteTree extends Extension
                 'attributes' => [
                     'rel' => $rel,
                     'type' => 'image/' . $icon->getExtension(),
-                    'size' => $size . 'x' . $size,
+                    'sizes' => $size . 'x' . $size,
                     'href' => $icon->FillMax($size, $size)->getAbsoluteURL(),
                 ],
             ];
